@@ -8,15 +8,17 @@ import NavFooterLayout from './layouts/layoutmainpage/NavFooterLayout';
 import Registrationpage from './pages/Registrationpage';
 import Loginpage from './pages/Loginpage';
 import OtpVerifypage from './pages/OtpVerifypage';
-
+import Homepage from './pages/Homepage';
+import ViewPhotographerpage from './pages/ViewPhotographerpage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
 
 <Route>
     <Route path='/' element={<NavFooterLayout/>} >
-          {/* <Route   path='home/'  />
-          <Route  path='about/'   />
+          <Route   path='' element={<Homepage/>}  />
+          <Route  path='/viewPhotographer' element={<ViewPhotographerpage/>}   />
+          {/* <Route  path='about/'   />
           <Route   path='contact' /> */}
     </Route>
         

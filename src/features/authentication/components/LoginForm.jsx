@@ -1,9 +1,9 @@
 import React from 'react';
-import Logo from '../assets/images/logo.png.png'
 import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
     return (
+        
         <>
         
             <div className="min-h-screen bg-[#496D7E] flex items-center justify-center px-4">

@@ -9,6 +9,9 @@ module.exports = {
         Vollkorn:["Vollkorn", 'serif'],
         Agdasima:["Agdasima", "sans-serif"],
         Ruwudu:[  "Ruwudu", 'serif'],
+        Poppins: ['Poppins', 'sans-serif'],
+        Prompt: ["Prompt", 'sans-seri'],
+
 
       }
     },

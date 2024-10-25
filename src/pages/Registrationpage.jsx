@@ -1,6 +1,5 @@
 import React from 'react';
 import RegistrationForm from '../features/authentication/components/RegistrationForm'
-
 import { useState } from 'react';
 import axiosInstance from '.././lib/axios'
 import { useNavigate } from 'react-router-dom';

@@ -1,6 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import TextField from '@mui/material/TextField';
-
 import logo from '../assets/images/logo.png.png';
 import camaraman from '../assets/images/signupimage.png.png';
 import CircularProgress from '@mui/material/CircularProgress';
