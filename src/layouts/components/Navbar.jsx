@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../features/authentication/assets/images/logo.png.png'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,13 +10,13 @@ const Navbar = () => {
   };
   return (
     <>
-   <header className="bg-white shadow-md sticky top-0 z-30">
+      <header className="bg-white shadow-md sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
           {/* Logo */}
           <Link to={'/'}>
-          <div className="flex-shrink-0 bg-[#1F485B]  cursor-pointer border rounded">
-            <img src={logo} alt="Logo" className="h-12 w-auto" />
-          </div>
+            <div className="flex-shrink-0 bg-[#1F485B]  cursor-pointer border rounded">
+              <img src={logo} alt="Logo" className="h-12 w-auto" />
+            </div>
           </Link>
 
           {/* Mobile Menu Icon */}
@@ -37,7 +37,7 @@ const Navbar = () => {
           <nav className="hidden md:flex space-x-8 font-Poppins font-bold">
             <ul className="flex items-center space-x-6">
               <Link to={'/viewPhotographer'}>
-              <li className="text-gray-700 hover:text-indigo-600 cursor-pointer">Booking</li>
+                <li className="text-gray-700 hover:text-indigo-600 cursor-pointer">Booking</li>
               </Link>
               <li className="text-gray-700 hover:text-indigo-600 cursor-pointer">Posts</li>
               <li className="text-gray-700 hover:text-indigo-600 cursor-pointer">Pricing</li>
@@ -47,13 +47,13 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4">
             <Link to={'/login'} >
               <button className="bg-transparent text-gray-700 font-semibold py-2 px-4 border border-gray-700 rounded hover:bg-gray-200">
-              Login
-            </button>
+                Login
+              </button>
             </Link>
             <Link to={'/register'}>
-            <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-500">
-              Sign up free
-            </button>
+              <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-500">
+                Sign up free
+              </button>
             </Link>
           </div>
         </div>
@@ -68,16 +68,16 @@ const Navbar = () => {
             </ul>
             <div className="flex flex-col items-center space-y-2 pb-4">
               <Link to={'/login'}>
-              <button className="bg-transparent text-gray-700 font-semibold py-2 px-4 border border-gray-700 rounded hover:bg-gray-100 w-full">
-                Login
-              </button>
+                <button className="bg-transparent text-gray-700 font-semibold py-2 px-4 border border-gray-700 rounded hover:bg-gray-100 w-full">
+                  Login
+                </button>
               </Link>
 
-              
+
               <Link to={'/register'} >
-              <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-500 w-full">
-                Sign up free
-              </button>
+                <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-500 w-full">
+                  Sign up free
+                </button>
               </Link>
             </div>
           </div>
