@@ -65,7 +65,7 @@ const Registrationpage = () => {
     try {
       const response = await axiosInstance.post('register/', data)
 
-      console.log(response.data);
+      console.log(response.data , 'pppp');
       console.log(data);
 
 
@@ -79,8 +79,10 @@ const Registrationpage = () => {
 
     } catch (error) {
 
-      // Handle error response
+     
       console.error(error.response?.data || 'Registration failed');
+      console.log(error.response?.data , 'ooooooooo');
+      
       setErrors('Registration failed. Please try again.');
       setLoading(false);
     }

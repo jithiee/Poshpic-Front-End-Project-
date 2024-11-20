@@ -34,6 +34,7 @@ const OtpVerifypage = () => {
           const response = await axiosInstance.post('otp_verify/', {
               email: email,
               otp: otp.join(''),
+            
           });
 
           if (response.data.error) {
@@ -49,8 +50,11 @@ const OtpVerifypage = () => {
               },2000)
           }
       } catch (error) {
-          console.error('Error during OTP verification:', error);
-          setErrorsMessage('An unexpected error occurred. Please try again.');
+          if (error.response && error.response.data && error.response.data.error) {
+            setErrorsMessage(error.response.data.error);
+          } else {
+            setErrorsMessage('An unexpected error occurred. Please try again.');
+          }
           setSuccessMessage('');
       } finally {
           setLoading(false);  
@@ -59,6 +63,8 @@ const OtpVerifypage = () => {
 
   const handleResendOtp = async () => {
       setResendLoading(true);  
+      setErrorsMessage('');
+      setSuccessMessage('');
 
       try {
           const response = await axiosInstance.post('resend_otp/', {
