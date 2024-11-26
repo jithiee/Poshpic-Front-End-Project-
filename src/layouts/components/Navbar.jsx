@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
           {/* Logo */}
           <Link to={'/'}>
-            <div className="flex-shrink-0 bg-[#1F485B]  cursor-pointer border rounded">
+            <div className="flex-shrink-0 bg-[#5478ed]  cursor-pointer border rounded">
               <img src={logo} alt="Logo" className="h-12 w-auto" />
             </div>
           </Link>
@@ -51,7 +51,8 @@ const Navbar = () => {
               </button>
             </Link>
             <Link to={'/register'}>
-              <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-500">
+              {/* <button className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-500"> */}
+              <button className="bg-indigo-500 text-white font-semibold py-2 px-4 rounded hover:bg-[#30cdfa] ">
                 Sign up free
               </button>
             </Link>

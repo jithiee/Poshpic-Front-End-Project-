@@ -1,90 +1,314 @@
 import React from 'react';
-import Button from '@mui/material/Button';
-import wedding from '../assets/images/Wedding.png';
-import event from '../assets/images/event.png';
-import nature from '../assets/images/Nature.png';
-import urban from '../assets/images/Urban.png';
-import fashion from '../assets/images/Fashion.png';
-import portrait from '../assets/images/Portrait.png';
+import '../assets/style/homepage.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import imgehome from '../assets/images/slider-dec.png'
 
 const Home = () => {
   return (
-    <div className="bg-black text-white min-h-screen font-[Poppins, sans-serif]">
-      {/* Hero Section */}
-      <section className="relative bg-cover bg-center h-screen flex items-center justify-center"
-        style={{ backgroundImage: "url('https://your-image-url.com')" }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80"></div>
-        <div className="relative z-10 text-center max-w-2xl mx-auto">
-          <h1 className="text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-lg">Capture Your Moments</h1>
-          <p className="text-xl text-gray-300 mb-8">Professional photography services to capture the essence of your most special moments. Book your session now!</p>
-          <Button
-            variant="contained"
-            color="primary"
-            className="bg-gradient-to-r from-[#1F485B] to-[#496D7E] px-10 py-4 rounded-full text-lg hover:shadow-lg hover:scale-105 transform transition-all duration-300"
-          >
-            Book a Session
-          </Button>
-        </div>
-      </section>
+    <>
 
-      {/* About Section */}
-      <section className="py-24 bg-gradient-to-r from-[#1F485B] to-[#496D7E] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold mb-6">Why Choose Us?</h2>
-          <p className="text-lg text-gray-300 mb-16 leading-relaxed">We bring professionalism, creativity, and passion to every shoot, ensuring your memories are perfectly captured.</p>
+      {/* main-banner ======================= */}
+      <div className="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="row">
+                <div className="col-lg-6 align-self-center">
+                  <div
+                    className="left-content show-up header-text wow fadeInLeft"
+                    data-wow-duration="1s"
+                    data-wow-delay="1s"
+                  >
+                    <div className="row">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { title: 'Creative Photography', description: 'Artistic and creative photoshoots tailored to your needs.' },
-              { title: 'High-Quality Images', description: 'Using the latest equipment, we provide high-resolution, stunning images.' },
-              { title: 'Flexible Packages', description: 'We offer flexible pricing and packages to suit all types of clients.' }
-            ].map((feature, index) => (
-              <div key={index} className="bg-white bg-opacity-10 p-10 rounded-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                      <div className="col-lg-12 text-center bg-gradient-to-r">
+                        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+                          Capture Moments, Book the Best Photographers
+                        </h2>
+                        <p className="text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">
+                          Find and book professional photographers for any occasion in just a few clicks. Create memories that last a lifetime with our easy-to-use platform.
+                        </p>
+                      </div>
 
-      {/* Portfolio Section */}
-      <section className="py-24 bg-black text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold mb-12">Our Portfolio</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {[{ img: wedding, label: 'Wedding Photography' },
-              { img: event, label: 'Event Photography' },
-              { img: nature, label: 'Nature Photography' },
-              // { img: fashion, label: 'Fashion Photography' },
-              // { img: urban, label: 'Urban Photography' },
-              // { img: portrait, label: 'Portrait Photography' }
-            ].map((portfolio, index) => (
-              <div key={index} className="relative overflow-hidden rounded-lg group shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                <img src={portfolio.img} alt={portfolio.label} className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-2xl font-bold">{portfolio.label}</span>
+
+                      <div className="col-lg-12">
+                        <div className="white-button first-button scroll-to-section">
+                          <a href="#contact">
+                            Free Quote <i className="fab fa-apple"></i>
+                          </a>
+                        </div>
+                        <div className="white-button scroll-to-section">
+                          <a href="#contact">
+                            Free Quote <i className="fab fa-google-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div
+                    className="right-image fadeInRight flex justify-end"
+                    data-wow-duration="1s"
+                    data-wow-delay="0.5s"
+                  >
+                    <img src={imgehome} alt="Slider Decoration" />
+
+                  </div>
+
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Call to Action Section */}
-      <section className="py-24 bg-gradient-to-r from-[#1F485B] to-[#496D7E] text-white text-center">
-        <h2 className="text-5xl font-bold mb-6">Ready to Capture Your Special Moment?</h2>
-        <p className="text-xl text-gray-300 mb-8">Book your session now and let us create memories that last a lifetime.</p>
-        <Button
-          variant="contained"
-          color="primary"
-          className="bg-gradient-to-r from-[#496D7E] to-[#1F485B] px-10 py-4 rounded-full text-lg hover:shadow-lg hover:scale-105 transform transition-all duration-300"
-        >
-          Get Started
-        </Button>
-      </section>
-    </div>
+
+
+      {/* Service ===== */}
+      <div id="services" className="services section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2">
+              <div
+                className="section-heading wow fadeInDown"
+                data-wow-duration="1s"
+                data-wow-delay="0.5s"
+              >
+                <h4>
+                  Amazing <em>Services &amp; Features</em> for you
+                </h4>
+                <img src="assets/images/heading-line-dec.png" alt="Heading Line Decoration" />
+                <p>
+                  If you need the greatest collection of HTML templates for your business, please
+                  visit{" "}
+                  <a
+                    rel="nofollow"
+                    href="https://www.toocss.com/"
+                    target="_blank"
+
+                  >
+                    TooCSS
+                  </a>{" "}
+                  Blog. If you need to have a contact form PHP script, go to{" "}
+                  <a href="https://templatemo.com/contact" target="_parent" rel="noreferrer">
+                    our contact page
+                  </a>{" "}
+                  for more information.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mx-auto px-4">
+          <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+            <div class="service-item bg-white p-6 rounded-lg shadow-md first-service">
+              <div class="icon mb-4"></div>
+              <h4 class="text-lg font-semibold mb-2">App Maintenance</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                You are not allowed to redistribute this template ZIP file on any other website.
+              </p>
+              <div class="text-button">
+                <a href="#" class="text-blue-500 hover:underline flex items-center">
+                  Read More <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="service-item bg-white p-6 rounded-lg shadow-md second-service">
+              <div class="icon mb-4"></div>
+              <h4 class="text-lg font-semibold mb-2">Rocket Speed of App</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit
+                this layout.
+              </p>
+              <div class="text-button">
+                <a href="#" class="text-blue-500 hover:underline flex items-center">
+                  Read More <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="service-item bg-white p-6 rounded-lg shadow-md third-service">
+              <div class="icon mb-4"></div>
+              <h4 class="text-lg font-semibold mb-2">Multi Workflow Idea</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                If this template is beneficial for your work, please support us
+                <a
+                  rel="nofollow"
+                  href="https://paypal.me/templatemo"
+                  target="_blank"
+                  class="text-blue-500 hover:underline"
+                >
+                  a little via PayPal
+                </a>.
+                Thank you.
+              </p>
+              <div class="text-button">
+                <a href="#" class="text-blue-500 hover:underline flex items-center">
+                  Read More <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+
+            <div class="service-item bg-white p-6 rounded-lg shadow-md fourth-service">
+              <div class="icon mb-4"></div>
+              <h4 class="text-lg font-semibold mb-2">24/7 Help &amp; Support</h4>
+              <p class="text-gray-600 text-sm mb-4">
+                Lorem ipsum dolor consectetur adipiscing elit sedder williamsburg photo booth
+                quinoa and fashion axe.
+              </p>
+              <div class="text-button">
+                <a href="#" class="text-blue-500 hover:underline flex items-center">
+                  Read More <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      {/* about ==== */}
+      {/* clients ====== */}
+
+
+      {/* pricing ==== */}
+      
+
+      {/* foooter === */}
+
+      <footer id="newsletter">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2">
+              <div className="section-heading">
+                <h4>Join our mailing list to receive the news &amp; latest trends</h4>
+              </div>
+            </div>
+            <div className="col-lg-6 offset-lg-3">
+              <form id="search" action="#" method="GET">
+                <div className="row">
+                  <div className="col-lg-6 col-sm-6">
+                    <fieldset>
+                      <input
+                        type="email"
+                        name="address"
+                        className="email"
+                        placeholder="Email Address..."
+                        autoComplete="on"
+                        required
+                      />
+                    </fieldset>
+                  </div>
+                  <div className="col-lg-6 col-sm-6">
+                    <fieldset>
+                      <button type="submit" className="main-button">
+                        Subscribe Now <i className="fa fa-angle-right"></i>
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div className="row">
+            {/* Contact Us Section */}
+            <div className="col-lg-3">
+              <div className="footer-widget">
+                <h4>Contact Us</h4>
+                <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
+                <p>
+                  <a href="tel:010-020-0340">010-020-0340</a>
+                </p>
+                <p>
+                  <a href="mailto:info@company.co">info@company.co</a>
+                </p>
+              </div>
+            </div>
+
+            {/* About Us Section */}
+            <div className="col-lg-3">
+              <div className="footer-widget">
+                <h4>About Us</h4>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Useful Links Section */}
+            <div className="col-lg-3">
+              <div className="footer-widget">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><a href="#">Free Apps</a></li>
+                  <li><a href="#">App Engine</a></li>
+                  <li><a href="#">Programming</a></li>
+                  <li><a href="#">Development</a></li>
+                  <li><a href="#">App News</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">App Dev Team</a></li>
+                  <li><a href="#">Digital Web</a></li>
+                  <li><a href="#">Normal Apps</a></li>
+                </ul>
+              </div>
+            </div>
+
+            {/* About Our Company Section */}
+            <div className="col-lg-3">
+              <div className="footer-widget">
+                <h4>About Our Company</h4>
+                <div className="logo">
+                  <img src="assets/images/white-logo.png" alt="Company Logo" />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright Section */}
+          <div className="col-lg-12">
+            <div className="copyright-text">
+              <p>
+                Copyright © 2022 Chain App Dev Company. All Rights Reserved.
+                <br />
+                Design: <a href="https://templatemo.com/" target="_blank" rel="noopener noreferrer" title="css templates">TemplateMo</a>
+                <br />
+                Distributed By: <a href="https://themewagon.com/" target="_blank" rel="noopener noreferrer" title="Bootstrap Template World">ThemeWagon</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+
+
+
+
+    </>
   );
 }
 
